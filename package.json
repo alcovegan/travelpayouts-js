@@ -1,0 +1,27 @@
+{
+  "name": "travelpayouts-js",
+  "version": "1.0.0",
+  "description": "Node.js module for work with Travelpayouts API (just tickets)",
+  "main": "index.js",
+  "scripts": {
+    "toc": "doctoc README.md --github --notitle --maxlevel 3"
+  },
+  "keywords": ["travelpayouts", "aviasales", "jetradar", "API"],
+  "author": "Alexander Sharabarov <alcovegan@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alcovegan/travelpayouts-js.git"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "date-fns": "^1.28.5",
+    "dotenv": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "nock": "^9.0.13",
+    "p-time": "^1.0.0"
+  }
+}
