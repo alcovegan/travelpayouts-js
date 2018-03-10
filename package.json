@@ -1,6 +1,6 @@
 {
   "name": "travelpayouts-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js module for work with Travelpayouts API (just tickets)",
   "main": "index.js",
   "scripts": {
