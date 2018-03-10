@@ -6,7 +6,12 @@
   "scripts": {
     "toc": "doctoc README.md --github --notitle --maxlevel 3"
   },
-  "keywords": ["travelpayouts", "aviasales", "jetradar", "API"],
+  "keywords": [
+    "travelpayouts",
+    "aviasales",
+    "jetradar",
+    "API"
+  ],
   "author": "Alexander Sharabarov <alcovegan@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -16,7 +21,8 @@
   "dependencies": {
     "axios": "^0.16.2",
     "date-fns": "^1.28.5",
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "winston": "^2.4.1"
   },
   "devDependencies": {
     "chai": "^4.0.2",
