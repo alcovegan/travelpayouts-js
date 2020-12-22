@@ -18,7 +18,7 @@ module.exports = (token) => (
 		return_date,
 		calendar_type = 'departure_date',
 		trip_duration,
-		currency,
+		currency = 'rub',
 		removeParams,
 		debug = false,
 		generateUrls = {}
