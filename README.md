@@ -1,4 +1,5 @@
 
+
 # Node.js Travelpayouts API (Aviasales / JetRadar) wrapper
 
 Node.js библиотека для работы с [Travelpayouts API](http://www.travelpayouts.com/?marker=11885.github&locale=ru) с некоторыми *opinionated defaults* и использованием промисов. Поддерживается только получение данных об авиабилетах. Библиотека вдохновлена [node-travelpayouts](https://github.com/Alex7Kom/node-travelpayouts), в ней можно найти так же работу с поиском авиабилетов и партнерской статистикой.
@@ -16,8 +17,8 @@ Node.js библиотека для работы с [Travelpayouts API](http://w
 - [Отладка](#%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0)
 - [Методы](#%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B)
 - [Цены](#%D1%86%D0%B5%D0%BD%D1%8B)
-  - [api.prices_for_dates(options)](#apipricesfordatesoptions)
-  - [api.grouped_prices(options)](#apigroupedpricesoptions)
+  - [api.prices_for_dates(options)](#apiprices_for_datesoptions)
+  - [api.grouped_prices(options)](#apigrouped_pricesoptions)
   - [api.latest(options)](#apilatestoptions)
   - [api.monthMatrix(options)](#apimonthmatrixoptions)
   - [api.weekMatrix(options)](#apiweekmatrixoptions)
@@ -165,6 +166,8 @@ api.city({
 
  - /v1/prices/calendar — передать в group_by значение departure_at или return_at
  - /v1/prices/monthly — передать в group_by значение month и не передавать параметры departure_at и return_at
+
+#### Параметры
 
 См. описание в [документации метода](https://support.travelpayouts.com/hc/ru/articles/203956163-Aviasales-API-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0-%D0%BA-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC-%D0%B4%D0%BB%D1%8F-%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D0%BA%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B#grouped-prices). Все значения из документации можно передать в вызов метода. Актуальны так же параметры описанные выше - __debug__ и __generateUrls__.
 
