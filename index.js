@@ -26,6 +26,7 @@ module.exports = ({token} = {}) => {
 	const prices = require('./api/prices')(token);
 	const airline = require('./api/airline')(token);
 	const city = require('./api/city')(token);
+	const prices_for_dates = require('./api/prices_for_dates')(token);
 
 return {
 	helpers: {
@@ -44,7 +45,8 @@ return {
 	directions,
 	prices,
 	airline,
-	city
+	city,
+	prices_for_dates
 }
 
 }
