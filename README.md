@@ -1,3 +1,4 @@
+
 # Node.js Travelpayouts API (Aviasales / JetRadar) wrapper
 
 Node.js библиотека для работы с [Travelpayouts API](http://www.travelpayouts.com/?marker=11885.github&locale=ru) с некоторыми *opinionated defaults* и использованием промисов. Поддерживается только получение данных об авиабилетах. Библиотека вдохновлена [node-travelpayouts](https://github.com/Alex7Kom/node-travelpayouts), в ней можно найти так же работу с поиском авиабилетов и партнерской статистикой.
@@ -15,6 +16,8 @@ Node.js библиотека для работы с [Travelpayouts API](http://w
 - [Отладка](#%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0)
 - [Методы](#%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B)
 - [Цены](#%D1%86%D0%B5%D0%BD%D1%8B)
+  - [api.prices_for_dates(options)](#apipricesfordatesoptions)
+  - [api.grouped_prices(options)](#apigroupedpricesoptions)
   - [api.latest(options)](#apilatestoptions)
   - [api.monthMatrix(options)](#apimonthmatrixoptions)
   - [api.weekMatrix(options)](#apiweekmatrixoptions)
@@ -99,11 +102,11 @@ api.city({
 		adults: 1,
 		children: 0,
 		infants: 0,
-		trip_class: 0
-		marker: 666777888
-		with_request: true
-		currency: 'rub'
-		locale: 'ru'
+		trip_class: 0,
+		marker: 666777888,
+		with_request: true,
+		currency: 'rub',
+		locale: 'ru',
 		url: 'http://whitelabel.yoursite.ru'
 	}
 })
@@ -142,6 +145,28 @@ api.city({
 ## Методы
 
 ## Цены
+
+### api.prices_for_dates(options)
+[Cамые дешевые авиабилеты на определённые даты](https://support.travelpayouts.com/hc/ru/articles/203956163-Aviasales-API-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0-%D0%BA-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC-%D0%B4%D0%BB%D1%8F-%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D0%BA%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B#prices-for-dates)
+
+Новый метод в API версии 3 (aviasales/v3/prices_for_dates), позволяющий заменить три эндпоинта API версии 1:
+
+ - /v1/prices/cheap — выставить параметры direct=false и sorting=price
+ - /v1/prices/direct — выставить параметры direct=true и sorting=price
+ - /v1/city-directions — выставить параметры sorting=route и unique=true. Передавать только origin
+
+#### Параметры
+
+См. описание в [документации метода](https://support.travelpayouts.com/hc/ru/articles/203956163-Aviasales-API-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0-%D0%BA-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC-%D0%B4%D0%BB%D1%8F-%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D0%BA%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B#prices-for-dates). Все значения из документации можно передать в вызов метода. Актуальны так же параметры описанные выше - __debug__ и __generateUrls__.
+
+### api.grouped_prices(options)
+
+Новый метод в API версии 3 (aviasales/v3/grouped_prices), позволяющий заменить два эндпоинта API версии 1:
+
+ - /v1/prices/calendar — передать в group_by значение departure_at или return_at
+ - /v1/prices/monthly — передать в group_by значение month и не передавать параметры departure_at и return_at
+
+См. описание в [документации метода](https://support.travelpayouts.com/hc/ru/articles/203956163-Aviasales-API-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0-%D0%BA-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC-%D0%B4%D0%BB%D1%8F-%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D0%BA%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B#grouped-prices). Все значения из документации можно передать в вызов метода. Актуальны так же параметры описанные выше - __debug__ и __generateUrls__.
 
 ### api.latest(options)
 [Цены на авиабилеты за 48 часов](https://support.travelpayouts.com/hc/ru/articles/203956163#02)
