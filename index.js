@@ -27,6 +27,7 @@ module.exports = ({token} = {}) => {
 	const airline = require('./api/airline')(token);
 	const city = require('./api/city')(token);
 	const prices_for_dates = require('./api/prices_for_dates')(token);
+	const grouped_prices = require('./api/grouped_prices')(token);
 
 return {
 	helpers: {
@@ -46,7 +47,8 @@ return {
 	prices,
 	airline,
 	city,
-	prices_for_dates
+	prices_for_dates,
+	grouped_prices
 }
 
 }

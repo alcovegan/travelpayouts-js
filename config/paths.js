@@ -12,6 +12,7 @@ module.exports = {
 		holidaysByRoutes: 'v2/prices/holidays-by-routes',
 		airline: 'v1/airline-directions',
 		city: 'v1/city-directions',
-		prices_for_dates: 'aviasales/v3/prices_for_dates'
+		prices_for_dates: 'aviasales/v3/prices_for_dates',
+		grouped_prices: 'aviasales/v3/grouped_prices'
 	}
 }
