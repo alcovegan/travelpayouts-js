@@ -24,7 +24,6 @@ module.exports = ({token} = {}) => {
 	const minPricesCalendar = require('./api/minPricesCalendar')(token);
 	const directions = require('./api/directions')(token);
 	const prices = require('./api/prices')(token);
-	const airline = require('./api/airline')(token);
 	const city = require('./api/city')(token);
 	const prices_for_dates = require('./api/prices_for_dates')(token);
 	const grouped_prices = require('./api/grouped_prices')(token);
@@ -45,7 +44,6 @@ return {
 	minPricesCalendar,
 	directions,
 	prices,
-	airline,
 	city,
 	prices_for_dates,
 	grouped_prices
