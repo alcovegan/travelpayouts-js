@@ -60,7 +60,7 @@ module.exports = (token) => (
 			.then(response => checkSuccessRequest(response))
 			.then(d => {
 
-				const data = d.data.prices;
+				const data = d.prices;
 
 				if(Object.keys(generateUrls).length > 0) {
 
